@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PRODUCTS</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <style>
+        .logo{
+            color: rgb(255, 255, 255);
+            font-size: 54px;
+            font-family: Verdana;
+            text-align: center;
+            padding-top: 5px;
+        }
+        body{
+            margin: 0;
+            font-family: Arial;
+            background: rgb(3, 59, 105);
+        }
+        h3{
+            text-align: center;
+            font-size: 30px;
+            margin: 0;
+            padding-top: 10px;
+        }
+        a{
+            text-decoration: none;
+        }
+        .gallery{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            margin: 50px 0;
+        }
+        .content{
+            width: 20%;
+            margin: 15px;
+            box-sizing: border-box;
+            float: left;
+            text-align: center;
+            border-radius: 20px;
+            cursor: pointer;
+            padding-top: 10px;
+            box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+            transition: .4s;
+            background: rgb(247, 244, 244);
+        }
+        .content:hover{
+            box-shadow: 0 3px 6px rgba(0,0,0,0.16),0 3px 6px rgba(0,0,0,0.23); 
+            transform: translate(0px, -8px);
+        }
+        img{
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            margin: 0 auto;
+            display: block;
+        }
+        p{
+            text-align: center;
+            color: rgb(5, 11, 27);
+            padding-top: 0 8px;
+        }
+        h6{
+            font-size: 26px;
+            text-align: center;
+            color: rgb(8, 6, 6);
+            margin: 0;
+        }
+        .fa{
+            font-size: 26px;
+            transition: .4s;
+            margin: 3px;
+        }
+        @media(max-width:1000px){
+            .content{
+                width: 45%;
+            }
+        }
+        @media(max-width:750px){
+            .content{
+                width: 100%;
+            }
+        }
+    </style>
+<body>
+    <h1 class="logo">PRODUCTS</h1>
+    <div class="gallery">
+        <div class="content">
+            <img src="icecream.jpg">
+            <h3>Ice Cream</h3>
+            <p>Try out our delicious 34 flavors Ice Cream.</p>
+            <h6>₱90.00</h6>
+        </div>
+    
+        <div class="content">
+            <img src="macaroons.jpg">
+            <h3>French Macarons</h3>
+            <p>Delicate sandwich cookies with a crisp exterior.</p>
+            <h6>₱320.00</h6>
+        </div>
+    
+        <div class="content">
+            <img src="cookies.jpg">
+            <h3>Daily Cookies</h3>
+            <p>Our baker's daily 5 flavors of cookies in a box.</p>
+            <h6>₱300.00</h6>
+        </div>
+
+        <div class="content">
+            <img src="browniealamode.jpg">
+            <h3>Ala Mode</h3>
+            <p>Brownies with vanilla ice cream on top.</p>
+            <h6>₱240.00</h6>
+        </div>
+
+        <div class="content">
+            <img src="Chocopeanutcake.jpg">
+            <h3>Choconut Cake</h3>
+            <p>Chocolate and peanut combination cake.</p>
+            <h6>₱275.00</h6>
+        </div>
+
+        <div class="content">
+            <img src="velvetcake.jpg">
+            <h3>Red Velvet Cake</h3>
+            <p>Sweet marriage of buttermilk and vanilla with a little cocoa for good measure.</p>
+            <h6>₱288.00</h6>
+        </div>
+
+        <div class="content">
+            <img src="carrotcakee.jpg">
+            <h3>Carrot Cake</h3>
+            <p>Flavor comes from brown sugar, cinnamon, ginger, nutmeg, and carrots.</p>
+            <h6>₱288.00</h6>
+        </div>
+
+        <div class="content">
+            <img src="icedlatte.jpg">
+            <h3>Iced Latte</h3>
+            <p>Philippines Arabica blended beans with milk and syrup.</p>
+            <h6>₱200.00</h6>
+        </div>
+
+        <div class="content">
+            <img src="icychoco.jpg">
+            <h3>Icy Choco</h3>
+            <p>Chocolate drink with some syrup and whip cream on top.</p>
+            <h6>₱180.00</h6>
+        </div>
+
+        <div class="content">
+            <img src="matcha.jpg">
+            <h3>Icy Matcha</h3>
+            <p>Japanese dark matcha with milk.</p>
+            <h6>₱180.00</h6>
+        </div>
+
+        <div class="content">
+            <img src="cappucino.jpg">
+            <h3>Cappuccino</h3>
+            <p>Espresso shot with milk and surface topped with foamed milk.</p>
+            <h6>₱190.00</h6>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flavor Page</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+<style>
+/*** FONTS ***/
+@import url(https://fonts.googleapis.com/css?family=Montserrat:900|Raleway:400,400i,700,700i);
+
+
+/*** EXTEND ***/
+/* box-shadow */
+.boxshadow {
+  box-shadow: 0.25rem 0.25rem 0.6rem rgb(3, 59, 105), 0 0.5rem 1.125rem rgb(3, 59, 105);
+}
+
+
+/*** STYLE ***/
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(3, 59, 105);
+  color: rgb(3, 59, 105);
+  font-family: 'Raleway', sans-serif;
+}
+
+main {
+  display: block;
+  margin: 0 auto;
+  max-width: 40rem;
+  padding: 1rem;
+}
+
+.title {
+  color: whitesmoke;
+  text-align: center;
+  font-size: 52px;
+  font-family: Cambria;
+}
+
+ol.gradient-list {
+  counter-reset: gradient-counter;
+  list-style: none;
+  margin: 1.75rem 0;
+  padding-left: 1rem;
+  > li {
+    background: rgb(255, 250, 237);
+    border-radius: 0 0.5rem 0.5rem 0.5rem;
+    @extend %boxshadow;
+    counter-increment: gradient-counter;
+    margin-top: 1rem;
+    min-height: 3rem;
+    padding: 1rem 1rem 1rem 3rem;
+    position: relative;
+    &::before,
+    &::after {
+      background: linear-gradient(135deg, rgb(226, 226, 252) 0%,rgb(140, 179, 140) 100%);
+      border-radius: 1rem 1rem 0 1rem;
+      content: '';
+      height: 3rem;
+      left: -1rem;
+      overflow: hidden;
+      position: absolute;
+      top: -1rem;
+      width: 3rem;
+    }
+    &::before {
+      align-items: flex-end;
+      @extend %boxshadow;
+      content: counter(gradient-counter);
+      color: $black;
+      display: flex;
+      font: 900 1.5em/1 'Montserrat';
+      justify-content: flex-end;
+      padding: 0.125em 0.25em;
+      z-index: 1;
+    }
+    @for $i from 1 through 5 {
+      &:nth-child(10n+#{$i}):before {
+        background: linear-gradient(135deg, rgba($green, $i * 0.2) 0%,rgba($yellow, $i * 0.2) 100%);
+      }
+    }
+    @for $i from 6 through 10 {
+      &:nth-child(10n+#{$i}):before {
+        background: linear-gradient(135deg, rgba($green, 1 - (($i - 5) * 0.2)) 0%,rgba($yellow, 1 - (($i - 5) * 0.2)) 100%);
+      }
+    }
+    + li {
+      margin-top: 2rem;
+    }
+  }
+}
+</style>
+<body>
+    <h2 class="title">FLAVORS</h2><br>
+    <main>
+        <ol class="gradient-list">
+            <li>BELGIAN CHOCOLATE<br>Authentically rich chocolate gelato with notes of dark chocolate liqueur.</li>
+            <li>CHOC CHIP<br>Classic crowd-pleaser with lots of chocolate chips.</li>
+            <li>CHOCOLATE<br>A deliciously creamy gelato that not only wins awards, but hearts as well.</li>
+            <li>CHOC MINT<br>A cool, minty gelato sprinkled with crunchy dark chocolate flakes.</li>
+            <li>MALTEN MADNESS<br>Chocolate malt gelato sprinkled with crunchy milk chocolate malt balls.</li>
+            <li>COOKIES N' CREAM<br>An intensely creamy gelato balanced with crispy chocolate biscuit crumb.</li>
+            <li>WHITE CHOCO<br>A flavor with the goodness of cocoa butter mixed with fresh milk.</li>
+            <li>VERONESE CHOCO<br>A hazelnut and chocolate gelato combined with gently-roasted hazelnuts and crispy wafer pieces.</li>
+            <li>CHOCO TRUFFLE<br>A strong rich chocolate gelato with lashings of cocoa powder.</li>
+            <li>CHOC HONEYCOMB<br>An explosive taste of crisp, sweet honeycomb with a smooth chocolatey coating.</li>
+            <li>CHILI CHOC<br>A cool chocolate gelato with the sting of chili.</li>
+            <li>MANGO<br>An award-winning refreshing sorbet made with prized Aussie Kensington Pride variety mangoes.</li>
+            <li>STRAWBERRY<br>A fresh fruity sorbet.</li>
+            <li>LEMON<br>A refreshing summer sorbet.</li>
+            <li>GREEN APPLE<br>A refreshing sorbet made with Granny Smith Apples.</li>
+            <li>BOYSENBERRY SWIRL<br>A creamy gelato topped with juicy plump Aussie grown boysenberry pieces and a berry swirl.</li>
+            <li>BERRY CHEESECAKE<br>A creamy cheesecake gelato rippled with a berry jam and topped with homemade biscuit crumble.</li>
+            <li>PASSIONFRUIT<br>A refreshing tropical sorbet.</li>
+            <li>LIME<br>A zesty citrus flavour.</li>
+            <li>RASPBERRY<br>A burst of flavor made with sun-ripened raspberries.</li>
+            <li>FOREST YOGHURT BERRY<br>A tangy yoghurt gelato with the berry on top!</li>
+            <li>CARAMEL<br>Our delicate caramel with a toffee swirl.</li>
+            <li>SALTED CARAMEL<br>A popular classic that can’t go wrong!</li>
+            <li>PISTACHIO<br>A nutty and creamy gelato created the true Italian way.</li>
+            <li>BURNT CARAMEL<br>A burnt delicate caramel with toffee syrup.</li>
+            <li>TIRAMISU<br>Inspired by the delicious coffee dessert.</li>
+            <li>ESPRESSO<br>A strong Italian-style coffee with caramel notes.</li>
+            <li>GREEN TEA<br>A true Japanese style green tea.</li>
+            <li>HAZELNUT<br>An award-winning traditional Italian classic made with Nocciola Romana hazelnuts.</li>
+            <li>SALTED MACADAMIA<br>An irresistible Latin American caramel fudge gelato sprinkled with salted macadamia.</li>
+            <li>APPLE CRUMBLE<br>A refreshing sorbet made with Granny Smith Apples.</li>
+            <li>SUGAR FREE VANILLA<br>A creamy sugar free vanilla gelato.</li>
+            <li>SUGAR FREE CHOCOLATE<br>A guilt-free rich and dark 96% sugar free chocolate sorbet.</li>
+            <li>SUGAR FREE STRAWBERRY<br>A 98% sugar free strawberry sorbet made with real fruit and with Stevia.</li>
+            </ol>
+      </main>
+</body>
